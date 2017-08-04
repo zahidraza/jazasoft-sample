@@ -25,8 +25,8 @@
     "webpack-dev-server": "^2.4.1"
   },
   "scripts": {
-    "build": "webpack",
+    "build": "webpack  --env=prod",
     "watch": "webpack --watch",
-    "serve": "webpack-dev-server --open --content-base ./dist"
+    "dev": "webpack-dev-server --env=dev --port 9000 --open --content-base ./dist"
   }
 }
