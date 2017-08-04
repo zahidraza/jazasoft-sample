@@ -8,13 +8,18 @@ import { GApp } from 'jazasoft';
 import { AuthClient, RestClient } from 'jazasoft/rest';
 import Resource from 'jazasoft/components/Resource';
 
+import GTApp from './GTApp';
+
 (function () {
  window.sessionStorage.clientToken = btoa('client:secret');
 })();
 
 const res11 = (props) => {
  return (
-   <div style={{marginTop: 100}}><Link to='/create' > Create </Link> <br/>Hello Resource 1.1 </div>
+  <div style={{marginTop: 100}}>
+    <Link to='/create' > Create </Link> <br/>
+    Hello Resource 1.1 
+  </div>
  )
 };
 
@@ -68,4 +73,9 @@ render(
   </GApp>, 
   document.getElementById("content")
 );
+
+// render(
+//   <GTApp />, 
+//   document.getElementById("content")
+// );
 
