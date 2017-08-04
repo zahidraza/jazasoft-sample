@@ -8,7 +8,9 @@ import { GApp } from 'jazasoft';
 import { AuthClient, RestClient } from 'jazasoft/rest';
 import Resource from 'jazasoft/components/Resource';
 
-import GTApp from './GTApp';
+//import GTApp from './GTApp';
+
+//import Button from 'react-bootstrap/lib/Button';
 
 (function () {
  window.sessionStorage.clientToken = btoa('client:secret');
@@ -78,4 +80,13 @@ render(
 //   <GTApp />, 
 //   document.getElementById("content")
 // );
+
+// render(
+//   <div>
+//     <Button bsStyle="primary"> Primary</Button>
+//     <Button bsStyle="success"> Success</Button>
+//     <Button bsStyle="danger"> Warning</Button>
+    
+//   </div>    
+// , document.getElementById("content"));
 
