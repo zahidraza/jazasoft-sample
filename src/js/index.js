@@ -4,78 +4,39 @@ import React from "react";
 import { render } from "react-dom";
 import { Link } from 'react-router-dom';
 
-import { GApp } from 'jazasoft';
-import { AuthClient, RestClient } from 'jazasoft/rest';
+import Dashboard from './Dashboard';
+import {GApp} from 'jazasoft';
 import Resource from 'jazasoft/components/Resource';
 
-import GTApp from './GTApp';
+import { Todo, TodoAdd } from './todo';
 
 (function () {
- window.sessionStorage.clientToken = btoa('client:secret');
+
 })();
 
-const res11 = (props) => {
- return (
-  <div style={{marginTop: 100}}>
-    <Link to='/create' > Create </Link> <br/>
-    Hello Resource 1.1 
-  </div>
- )
-};
 
-const res12 = (props) => {
- return (
-   <div style={{marginTop: 100}}><Link to='/ab' > Home </Link> <br/>Resource 1.2</div>
- )
-};
 
-const res21 = (props) => {
- return (
-   <div style={{marginTop: 100}}><Link to='/create' > Create </Link> <br/> Resource 2.1</div>
- )
-};
-
-const res22 = (props) => {
- return (
-   <div style={{marginTop: 100}}><Link to='/' > Home </Link> <br/>Resource 2.2</div>
- )
-};
-
-const routes1 = [
+const todoRoute = [
  {
    path: '',
-   component: res11
+   component: Todo
  },
  {
-   path: 'create',
-   component: res12
- }
+  path: 'add',
+  component: TodoAdd
+}
 ];
 
-const routes2 = [
- {
-   path: '',
-   component: res12
- },
- {
-   path: 'create',
-   component: res22
- }
-];
-
+const dashboardRoute = [ { path: '', component: Dashboard } ];
 
 render(
-  <GApp restClient={RestClient('http://localhost:8003/api')} authClient={AuthClient('http://localhost:8003/oauth')} 
-    appName="Time and Action Calender"
-    appShortName="TNA"
+  <GApp
+    appName="Todo App"
+    appShortName="Todo App"
    >
-    <Resource label='Resource 1' name='res1' routes={routes1} />
+    <Resource label='Dashboard' name='' routes={dashboardRoute} />
+    <Resource label='Todo' name='todo' routes={todoRoute} />
   </GApp>, 
   document.getElementById("content")
 );
-
-// render(
-//   <GTApp />, 
-//   document.getElementById("content")
-// );
 
