@@ -8,13 +8,7 @@ import Dashboard from './Dashboard';
 import {GApp} from 'jazasoft';
 import Resource from 'jazasoft/components/Resource';
 
-<<<<<<< HEAD
-//import GTApp from './GTApp';
-
-//import Button from 'react-bootstrap/lib/Button';
-=======
 import { Todo, TodoAdd } from './todo';
->>>>>>> test
 
 (function () {
 
@@ -46,20 +40,3 @@ render(
   document.getElementById("content")
 );
 
-<<<<<<< HEAD
-// render(
-//   <GTApp />, 
-//   document.getElementById("content")
-// );
-
-// render(
-//   <div>
-//     <Button bsStyle="primary"> Primary</Button>
-//     <Button bsStyle="success"> Success</Button>
-//     <Button bsStyle="danger"> Warning</Button>
-    
-//   </div>    
-// , document.getElementById("content"));
-
-=======
->>>>>>> test
